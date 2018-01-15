@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0"/>
+    <!--<meta name="viewport" content="width=320,maximum-scale=1.3,user-scalable=no">-->
+    <title></title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/css.css"/>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <!--<script src="js/echarts-all.js"></script>-->
+    <script src="js/echarts.min.js"></script>
+
+</head>
+<style>
+    html,body{
+        height: auto;
+    }
+</style>
+<body>
+<!--<header><span></span>中融新经济灵活配置混合A </header>-->
+
+<div style="background: #fff;border-bottom: 1px solid #e2e2e2;margin-top: 45px;">
+    <div class="qinjuan">
+        <img src="images/ico22.png" alt="">
+        <span>秦娟</span>
+    </div>
+
+
+    <div style="position: relative;">
+        <div class="chart01" id="chart01" style="width: auto; height: 300px; margin: 0 auto"></div>
+        <!--<div class="legend clearfix">-->
+            <!--<span><i></i>个人能力</span>-->
+            <!--<span><i></i>新人平均</span>-->
+        <!--</div>-->
+    </div>
+</div>
+
+<div  class="earnings">
+    <div class="mixtureA_til"><img src="images/euro.png" alt=""/><span>收益</span></div>
+    <ul class="earnings01">
+        <li><span>单位净值</span><br/><span>1.7430</span></li>
+        <li><span>日涨幅</span><br/><span>5.5%</span></li>
+        <li><span>年涨幅</span><br/><span>115.5%</span></li>
+    </ul>
+    <div class="mixtureA_til" style="padding-top: 12px;"><img src="images/open-book.png" alt=""/><span>概况</span></div>
+    <ul class="earnings02">
+        <li>
+            <p>成长日期<span>2015.02.06</span></p>
+            <p>起购金额<span>100元</span></p>
+        </li>
+        <li>
+            <p>风险等级<span style="color: #e7152a;">中</span></p>
+            <p>投资类型<span>混合型</span></p>
+        </li>
+    </ul>
+</div>
+
+<div  class="earnings">
+    <div class="mixtureA_til"><img src="images/bar-chart.png" alt=""/><span>基金净值</span></div>
+
+    <div class="fundWorth clearfix"><span class="fundWorth_active">净值增长率</span><span>单位净值</span></div>
+
+    <div class="mixtureA01">
+        <div class="month">
+            <ul class="clearfix">
+                <li class="month_active">一月</li>
+                <li>一季</li>
+                <li>半年</li>
+                <li>一年</li>
+            </ul>
+        </div>
+
+        <!--<p class="chart02_til"><i></i>七日年化收益率</p>-->
+        <div class="chart02" id="chart02"></div>
+    </div>
+
+    <div class="mixtureA02" style="display: none;">
+        <div class="month">
+            <ul class="clearfix">
+                <li class="month_active">一月</li>
+                <li>一季</li>
+                <li>半年</li>
+                <li>一年</li>
+            </ul>
+        </div>
+
+        <!--<p class="chart02_til"><i></i>七日年化收益率</p>-->
+        <div class="chart02" id="chart02_01"></div>
+    </div>
+
+</div>
+
+<div  class="earnings">
+    <div class="mixtureA_til"><img src="images/pie-chart.png" alt=""/><span>资产分布</span></div>
+
+    <div style="position: relative;padding-bottom: 1rem;">
+        <div class="chart03" id="chart03"></div>
+        <!--<div class="chart03_til">-->
+            <!--<ul>-->
+                <!--<li><i></i>权益投资</li>-->
+                <!--<li><i></i>固定收益投资</li>-->
+                <!--<li><i></i>现金（存款和结算备付金）</li>-->
+                <!--<li><i></i>其他资产</li>-->
+            <!--</ul>-->
+        <!--</div>-->
+    </div>
+
+</div>
+
+<div class="distribution">
+    <table>
+        <thead>
+        <tr>
+            <th style="width:35%;text-align:left;padding-left: 10px;">资产类型</th>
+            <th style="width: 25%">金额（亿元）</th>
+            <th style="width: 40%">占基金总资产比例%</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>权益投资</td>
+            <td>0.56</td>
+            <td>20.19</td>
+        </tr>
+        <tr>
+            <td>固定收益投资</td>
+            <td>0.56</td>
+            <td>20.19</td>
+        </tr>
+        <tr>
+            <td>现金（存款和结算备付金）</td>
+            <td>0.56</td>
+            <td>20.19</td>
+        </tr>
+        <tr>
+            <td>其他资产</td>
+            <td>0.56</td>
+            <td>20.19</td>
+        </tr>
+        </tbody>
+
+    </table>
+</div>
+
+<div class="earnings">
+    <div class="mixtureA_til"><img src="images/gold-ingots.png" alt=""/><span>分红信息</span></div>
+    <div class="distribution distribution01">
+        <table>
+            <thead>
+            <tr>
+                <th style="width:35%;">除息日</th>
+                <th style="width: 35%">减息日</th>
+                <th style="width: 30%">元/10份</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>2015.02.06</td>
+                <td>2015.02.06</td>
+                <td>4.23</td>
+            </tr>
+
+            </tbody>
+
+        </table>
+    </div>
+</div>
+
+</body>
+</html>
+<script src="js/highcharts/highcharts.js"></script>
+<script src="js/highcharts/highcharts-more.js"></script>
+<script src="js/highcharts/exporting.js"></script>
+<script src="js/highcharts/highcharts-zh_CN.js"></script>
+<script>
+    window.onload= window.onresize=function(){
+        var html=document.documentElement;  //获得html
+        var hW=document.documentElement.clientWidth;  //屏幕宽度
+        //假定设计稿的宽度是750px;  750/12=60   html的font-size是60px  即1rem=60px;
+        html.style.fontSize=hW/12+'px';  //html的字体大小:屏幕平分12等份;
+//        console.log(hW);
+
+
+
+
+        var screenW=document.documentElement.clientWidth;
+//        $(".chart01").height(screenW*0.9);
+        $(".chart01").height(screenW*0.8);
+        $(".chart02").height(screenW*0.75);
+        $(".chart03").height(screenW*0.9);
+
+
+        $(".fundWorth span").click(function(){
+            var i=$(this).index();
+            $(this).addClass("fundWorth_active").siblings().removeClass("fundWorth_active");
+
+            if(i==0){
+                $(".mixtureA01").show();
+                $(".mixtureA02").hide();
+                chart02();
+            }
+            if(i==1){
+                $(".mixtureA02").show();
+                $(".mixtureA01").hide();
+                chart02_01();
+            }
+
+
+
+
+        });
+
+        $(".month li").click(function(){
+            $(this).addClass("month_active").siblings().removeClass("month_active");
+        });
+
+        chart01();
+
+//        chart02_01();
+        chart03();
+
+        //******************************************************************chart01
+
+        function chart01(){
+            $(function () {
+                $('#chart01').highcharts({
+                    colors: ['#62a9ff', '#d859f2'],
+                    chart: {
+                        polar: true,
+                        type: 'line'
+                    },
+                    credits: {
+                        enabled:false
+                    },
+                    exporting: {
+                        enabled:false
+                    },
+                    title: {
+                        text:null,
+                        x: -80
+                    },
+                    pane: {
+                        size: '75%'
+                    },
+                    xAxis: {
+                        categories: ['管理经验', '管理规模', '最差表现', '一年收益'],
+//                        categories: ['管理经验<br/>Top 49.15%', '\0 \0 \0 管理规模<br/>Top 49.15%',
+//                            '最差表现<br/>Top 49.15%', '一年收益 \0 \0 <br/> Top 49.15%'],
+                        tickmarkPlacement: 'on',
+                        lineWidth: 0,
+                        labels: {
+                            formatter:function(){
+//                               console.log(this.value)
+                                if(this.value=="一年收益"){
+                                    return '<div style="text-align: center;"><span>'+this.value+'\0 </span><br/><span>Top 49.15%</span></div>'
+                                }
+                                else if(this.value=="管理规模"){
+                                    return '<div style="text-align: center;"><span>\0 '+this.value+'</span><br/><span>Top 49.15%</span></div>'
+                                }
+                                return '<div style="text-align: center;"><span>'+this.value+'</span><br/><span>Top 49.15%</span></div>'
+                            }
+                        }
+                    },
+                    yAxis: {
+                        gridLineInterpolation: 'polygon',
+                        lineWidth: 0,
+                        min: 0
+                    },
+                    tooltip: {
+                        shared: true,
+                        pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f}% (top:0.29%)</b><br/>'
+
+                    },
+                    legend: {
+                        align: 'center',
+                        verticalAlign: 'bottom',
+                        y: 10
+//                layout: 'vertical'
+                    },
+                    series: [{
+                        name: '个人能力',
+                        data: [12000, 19000, 60000, 35000],
+                        pointPlacement: 'on'
+                    }, {
+                        name: '新人平均',
+                        data: [50000, 39000, 42000, 31000],
+                        pointPlacement: 'on'
+                    }]
+                });
+            });
+        }
+        //******************************************************************chart02
+
+
+
+//        [
+//            {
+//                name:'中融新经济灵活配置混合A',
+//                type:'line',
+////                        stack: '总量',//相同导致数据累加
+//                data:arrarr,
+//                symbol:"none"
+//
+//            },
+//            {
+//                name:'上证综指',
+//                type:'line',
+////                        stack: '总量',
+//                data:[[0,0,4543], [1,1,4654], [2,2,531], [3,3,243],[4,5,453],[5,4,1234]],
+//                symbol:"none"
+//
+//            },
+//            {
+//                name:'沪深300',
+//                type:'line',
+////                        stack: '总量',
+//                data:[[0,0,243], [1,2,154], [2,3,123], [3,0,534],[4,-17,534],[5,3,112]],
+//                symbol:"none"
+//
+//            }
+//
+//        ]
+        var chart02_time=["2017-10-01%星期一","2017-10-01%星期二","2017-01-01%星期三","2017-04-01%星期四","2017-07-01%星期五","2017-07-01%星期六"];
+        var name=['中融新经济灵活配置混合A','上证综指','沪深300'];
+        var seriesLen=name.length;  //一共有几组
+        var series=[];
+        var arrarr=[];
+       //组合数据
+        var aa=[[0,2,-18,-15,-17,3],[1,3,-15,-15,5,3],[0,5,-15,-18,4,3]];  //百分之几
+        var bb=[[112,4324,54,76,54,65],[112,45,876,213,65,65],[634,132,134,352,154,675]];  //加粗数据
+
+        for(var j=0;j<seriesLen;j++){
+            arrarr[j]=[];
+            var len=aa[0].length;
+            for(var i=0;i<len;i++){
+                arrarr[j][i]=[i];
+                arrarr[j][i].push(aa[j][i]);
+                arrarr[j][i].push(bb[j][i])
+            }
+        }
+//****************************************************************
+
+        for(var mm=0;mm<seriesLen;mm++){
+            series[mm]={
+                name:name[mm],
+                type:'line',
+                data:arrarr[mm],
+                symbol:"none"
+
+            };
+        }
+//****************************************************
+        chart02();
+
+        function chart02(){
+            // 基于准备好的dom，初始化echarts图表
+            //console.log(arr00)
+            var myChart = echarts.init(document.getElementById('chart02'));
+            //console.log(chart02_time)
+            option = {
+                title: {
+                    show:false,
+                    text: '折线图堆叠'
+                },
+                tooltip: {
+                    trigger: 'axis',
+                    position: function (pos, params, dom, rect, size) {
+                        // 鼠标在左侧时 tooltip 显示到右侧，鼠标在右侧时 tooltip 显示到左侧。
+                        var obj = {top: 60};
+                        obj[['left', 'right'][+(pos[0] < size.viewSize[0] / 2)]] = 5;
+                        return obj;
+                    },
+                    backgroundColor:"rgba(255,255,255,0.7)",
+                    borderWidth:1,
+                    borderColor:"#62a9ff",
+                    textStyle:{
+                        color:"#000",
+                        fontSize:12
+                    },
+                    formatter: function(params) {
+                        //console.log(params)
+                        var res =params[0].axisValue+'</br>';
+                        for (var i = 0; i < params.length; i++) {
+
+                            res+='<span style="color: '+params[i].color+'">'+params[i].seriesName+'</span>:<span style="color: #000;font-weight: bold;">'+params[i].data[2]+'</span>('+params[i].data[1]+'%)</br>'
+                        }
+                        return res;
+                    }
+
+                },
+                legend: {
+                    icon : 'square',
+                    data:['中融新经济灵活配置混合A','上证综指','沪深300']
+                },
+                grid: {
+                    left: '5%',
+                    right: '5%',
+                    bottom: '0%',
+                    top:'25%',
+                    containLabel: true
+                },
+                toolbox: {
+                    show:false,
+                    feature: {
+                        saveAsImage: {}
+                    }
+                },
+
+                xAxis: {
+                    type: 'category',
+                    boundaryGap: false,
+                    data:chart02_time ,
+                    axisTick: {    //去掉X轴刻度线
+                        show: false
+                    },
+                    splitLine: {
+                        show: true,
+                        lineStyle: {
+                            type: "dotted",
+                            width: 1,
+                            color: "#c5c5c5"
+                        }
+                    },
+                    axisLine: {
+                        show: true,
+                        onZero: false,
+                        lineStyle: {
+                            type: "solid",
+                            width: 1,
+                            color: "#b7b7b7"
+                        }
+                    },
+                    axisLabel:{
+                        formatter: function (value) {
+                            //console.log(value.split("%"))
+                            return value.split("%")[0].slice(5)
+                        }
+                    }
+
+                },
+                yAxis: {
+                    type: 'value',
+
+                    axisLabel : {
+                        inside:true,   //向内展示
+                        textStyle: {
+                            fontSize: 12,
+                            baseline:"bottom"
+                        },
+//                        formatter: '{value} %',
+                        formatter: function (value, index) {
+                            var val=value.toFixed(2);
+                            return val+'%';
+                        }
+                    },
+                    axisTick:{    //去掉Y轴刻度线
+                        show:false
+                    },
+                    splitLine:{
+                        show:true,
+                        lineStyle:{
+                            type:"dotted",
+                            width:1,
+                            color:"#c5c5c5"
+                        }
+                    },
+                    axisLine:{
+                        lineStyle:{
+                            type:"solid",
+                            width:1,
+                            color:"#b7b7b7"
+                        }
+                    },
+                    min:-20.00,
+                    max:5.00,
+                    splitNumber:5
+
+
+                },
+
+                series: series
+            };
+            // 为echarts对象加载数据
+            myChart.setOption(option);
+            window.onresize = myChart.resize;
+        }
+
+        //******************************************************************chart02_01
+        function minVal(arr) {
+            var min = arr[0];
+            var len = arr.length;
+            for (var i = 1; i < len; i++){
+                if (arr[i] < min){
+                    min = arr[i];
+                }
+            }
+            return min;
+        }
+        function maxVal(arr) {
+            var max = arr[0];
+            var len = arr.length;
+            for (var i = 1; i < len; i++){
+                if (arr[i] > max){
+                    max = arr[i];
+                }
+            }
+            return max;
+        }
+
+        var chart02_01_data=["0.868", "0.877", "0.881", "0.885", "0.882", "0.880", "0.874", "0.882", "0.885", "0.881", "0.880", "0.898", "0.905", "0.923", "0.932", "0.946", "0.938", "0.947", "0.945", "0.938"]
+        var chart02_01_time=["","06-21","07-02","06-21","07-02","06-21","07-02","06-21","07-02","06-21","07-02","06-21","07-02","06-21","07-02","06-21","07-02","06-21","07-02","06-21"]
+       var chart02_01_min=minVal(chart02_01_data);
+       var chart02_01_max=maxVal(chart02_01_data);
+
+        function chart02_01(){
+            // 基于准备好的dom，初始化echarts图表
+            var myChart = echarts.init(document.getElementById('chart02_01'));
+//console.log(chart02_01_max+0.02)
+            option = {
+                color:['#1e97e5'],
+                grid:{
+                    x:screenW*0.133,
+
+                    width:screenW*0.8
+
+                },
+                title : {
+                    show : false,
+                    text: '未来一周气温变化',
+                    subtext: '纯属虚构'
+                },
+                tooltip : {
+                    show : true,
+                    trigger: 'axis',
+                    position: function (pos, params, dom, rect, size) {
+                        // 鼠标在左侧时 tooltip 显示到右侧，鼠标在右侧时 tooltip 显示到左侧。
+                        var obj = {top: 60};
+                        obj[['left', 'right'][+(pos[0] < size.viewSize[0] / 2)]] = 5;
+                        return obj;
+                    },
+                    backgroundColor:"rgba(255,255,255,0.7)",
+                    borderWidth:1,
+                    borderColor:"#62a9ff",
+                    textStyle:{
+                        color:"#000",
+                        fontSize:12
+                    },
+                    formatter: function(params) {
+                       // console.log(params)
+                        var res ='<span style="font-weight: bold;color: #000;">'+params[0].seriesName+'</span></br>';
+                        res+=params[0].axisValue+':'+params[0].data;
+                        return res;
+                    }
+                },
+                legend: {
+                    icon : 'square',
+                    data:['中融新经济灵活配置混合A']
+                },
+                toolbox: {
+                    show : false,
+                    feature : {
+                        mark : {show: true},
+                        dataView : {show: true, readOnly: false},
+                        magicType : {show: true, type: ['line', 'bar']},
+                        restore : {show: true},
+                        saveAsImage : {show: true}
+                    }
+                },
+                calculable : false,
+                xAxis : [
+                    {
+                        show:true,
+                        type : 'category',
+                        boundaryGap : false,
+                        data : chart02_01_time
+                    }
+                ],
+                yAxis : [
+                    {
+                        type : 'value',
+                        axisLine:{
+                            show:false
+                        },
+                        axisTick:{    //去掉Y轴刻度线
+                            show:false
+                        },
+                        min:chart02_01_min
+//                        max:0.96
+
+                    }
+                ],
+                series : [
+                    {
+                        name:'中融新经济灵活配置混合A',
+                        type:'line',
+                        data:chart02_01_data,
+                        symbol:"none"
+                    }
+                ]
+            };
+            // 为echarts对象加载数据
+            myChart.setOption(option);
+            window.onresize = myChart.resize;
+
+        }
+
+        //******************************************************************chart03
+        function chart03(){
+            // 基于准备好的dom，初始化echarts图表
+            var myChart = echarts.init(document.getElementById('chart03'));
+
+            option = {
+                color:['#9bd2f8','#2c82be','#53a8e2','#76ddfb'],
+                tooltip : {
+                    show : true,
+                    trigger: 'item',
+                    position: function (pos, params, dom, rect, size) {
+                        // 鼠标在左侧时 tooltip 显示到右侧，鼠标在右侧时 tooltip 显示到左侧。
+                        var obj = {top: 60};
+                        obj[['left', 'right'][+(pos[0] < size.viewSize[0] / 2)]] = 5;
+                        return obj;
+                    },
+                    backgroundColor:"rgba(255,255,255,0.7)",
+                    borderWidth:1,
+                    borderColor:"#62a9ff",
+                    textStyle:{
+                        color:"#000",
+                        fontSize:12
+                    },
+                    formatter: "{b} : {c} (亿元)"  //控制提示
+//                    formatter: "{a} <br/>{b} : {c} (亿元)"  //控制提示
+                },
+
+                legend: {
+                    show : true,
+                    icon : 'square',
+//                    orient : 'vertical',
+                    x : "5%",
+                    right:"5%",
+                    bottom:0,
+                    width:"auto",
+                    data:['权益投资','固定收益投资','现金 (存款和结算备付金)','其他资产']
+                },
+                toolbox: {
+                    show : false,
+                    feature : {
+                        mark : {show: true},
+                        dataView : {show: true, readOnly: false},
+                        magicType : {
+                            show: true,
+                            type: ['pie', 'funnel'],
+                            option: {
+                                funnel: {
+                                    x: '25%',
+                                    width: '50%',
+                                    funnelAlign: 'center',
+                                    max: 1548
+                                }
+                            }
+                        },
+                        restore : {show: true},
+                        saveAsImage : {show: true}
+                    }
+                },
+                calculable : false,
+                series : [
+                    {
+                        name:'访问来源',
+                        type:'pie',
+//                        selectedMode: 'single',
+                        radius:['30%','45%'],
+                        center: ['45%', '40%'],
+//                radius : ['50%', '70%'],
+                        itemStyle : {
+                            normal : {
+                                label : {
+                                    show : true,
+
+//                                    position :'inside' ,
+                                    formatter:function(val){   //让series 中的文字进行换行
+                                        return val.name.split(" ").join("\n")+"\n"+"(12.5%)";
+                                    },
+                                    textStyle : {
+                                        fontSize : '12',
+                                        align:"center",
+                                        fontWeight : 'normal'
+
+                                    }
+
+                                },
+
+                                labelLine : {
+                                    normal:{
+                                        show:true,
+                                        length:'1',
+                                        length2:'1'
+                                    }
+                                }
+                            }
+                        },
+                        data:[
+                            {value:500, name:'现金 (存款和结算备付金)'},
+                            {value:1500, name:'固定收益投资'},
+                            {value:100, name:'权益投资'},
+                            {value:400, name:'其他资产'}
+                        ]
+                    }
+                ]
+            };
+
+            // 为echarts对象加载数据
+            myChart.setOption(option);
+            window.onresize = myChart.resize;
+
+        }
+
+    };
+
+
+
+
+
+</script>
+

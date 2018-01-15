@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0"/>
+    <title></title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/css.css"/>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <!--<script src="js/echarts-all.js"></script>-->
+    <script src="js/echarts.min.js"></script>
+    <style>
+        html, body{
+            height: auto;
+        }
+    </style>
+</head>
+<body style="margin-top:45px;">
+<!--<header id="header"><span></span>秦娟</header>-->
+<div style="background: #fff;">
+    <div class="qinjuan">
+        <img src="images/ico22.png" alt="">
+        <span style="float: none;padding-left:20px;vertical-align: middle;">秦娟</span>
+    </div>
+</div>
+
+<div class="three_month_earnings" id="three_month_earnings"><span>中融新经济灵活配置混合A</span><span>近三月收益 <i>120.71%</i></span></div>
+
+<div class="qinjuan_nav">
+    <ul id="qinjuan_nav">
+        <li class="qinjuan_nav_active">个人主页</li>
+        <li>在管基金</li>
+        <li>历史业绩</li>
+    </ul>
+</div>
+
+<div class="info" style="display: block;">
+    <div style="border-bottom: 1px solid #e2e2e2;background: #fff;">
+
+        <div style="position: relative;background: #fff;">
+            <div class="chart01" id="chart01" style="width: auto; height: 300px; margin: 0 auto"></div>
+            <!--<div class="legend clearfix">-->
+                <!--<span><i></i>个人能力</span>-->
+                <!--<span><i></i>新人平均</span>-->
+            <!--</div>-->
+
+        </div>
+
+        <div class="qinjuan_table">
+            <div class="qinjuan_line"></div>
+            <div class="qinjuan_table_cont">
+                <table>
+                    <tbody>
+                    <tr>
+                        <td></td>
+                        <td>个人能力</td>
+                        <td>新人平均</td>
+                    </tr>
+                    <tr>
+                        <td>管理经验</td>
+                        <td>1.54年</td>
+                        <td>1.56年</td>
+                    </tr>
+                    <tr>
+                        <td>最差表现</td>
+                        <td>-2.7%/季</td>
+                        <td>-9.71%/季</td>
+                    </tr>
+                    <tr>
+                        <td>最近一年</td>
+                        <td>11.86%</td>
+                        <td>11.86%</td>
+                    </tr>
+                    <tr>
+                        <td>管理规模</td>
+                        <td>1.96亿</td>
+                        <td>24.56亿</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="personalResume">
+        <div class="personalResume_til">个人简历</div>
+        <p>
+            马乐，性别，男，研究生/硕士，出生于1982年。2006年从清华大学毕业后进入博时基金工作，曾任博时精选基金经理
+        </p>
+    </div>
+</div>
+
+<div class="info">
+    <div class="tubeFund">
+        <table>
+            <thead>
+            <tr>
+                <th style="width: 40%;" class="th">基金名称</th>
+                <th style="min-width: 30%;">近3个月收益率</th>
+                <th style="min-width: 30%;">半年收益率</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><span>中融新经济灵活配置混合A</span><br/><span>160211</span></td>
+                <td>4.22%</td>
+                <td>19.11%</td>
+            </tr>
+            <tr>
+                <td><span>中融新经济灵活配置混合A</span><br/><span>160211</span></td>
+                <td>4.22%</td>
+                <td>19.11%</td>
+            </tr>
+            <tr>
+                <td><span>中融新经济灵活配置混合A</span><br/><span>160211</span></td>
+                <td>4.22%</td>
+                <td>19.11%</td>
+            </tr>
+            <tr>
+                <td><span>中融新经济灵中中融融新中中</span><br/><span>160211</span></td>
+                <td>4.22%</td>
+                <td>19.11%</td>
+            </tr>
+            <tr>
+                <td><span>中融新经济灵活配置混合A</span><br/><span>160211</span></td>
+                <td>4.22%</td>
+                <td>19.11%</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="chart04">
+        <div class="chart04_til">在管理基金收益走势图(近3个月)</div>
+        <div style="position: relative;overflow: hidden;">
+            <div class="chart04_cont" id="chart04"></div>
+        </div>
+
+    </div>
+</div>
+
+<div class="info">
+    <div class="tubeFund tubeFund02">
+
+        <table>
+            <thead>
+            <tr>
+                <th style="width: 40%;" class="th">管理基金</th>
+                <th style="min-width: 30%;">任职期限</th>
+                <th style="min-width: 30%;">管理期业绩</th>
+            </tr>
+            </thead>
+            <tbody id="tbody">
+            <tr>
+                <td>大成行业轮动大成行业轮动混合混合</td>
+                <td><span>2013-04-08<br/>2015-05-22<i>至</i></span></td>
+                <td>19.11%</td>
+            </tr>
+            <tr>
+                <td>大成行业轮动混合</td>
+                <td><span>2013-04-08<br/>2015-05-22<i>至</i></span></td>
+                <td>19.11%</td>
+            </tr>
+            <tr>
+                <td>大成行业轮动混合</td>
+                <td><span>2013-04-08<br/>2015-05-22<i>至</i></span></td>
+                <td>19.11%</td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="notubeFund" style="display: none;">
+            <p>无历史业绩基金数据</p>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
+<script src="js/highcharts/highcharts.js"></script>
+<script src="js/highcharts/highcharts-more.js"></script>
+<script src="js/highcharts/exporting.js"></script>
+<script src="js/highcharts/highcharts-zh_CN.js"></script>
+<script>
+    $(".three_month_earnings").click(function(){
+        $(window.parent.document).find("header i").html("sssss");
+    })
+
+    window.onload= window.onresize=function(){
+
+        var screenW=document.documentElement.clientWidth;
+        $(".chart01").height(screenW*0.8);
+        $(".chart04_cont").height(screenW*0.75);
+//        $(".chart04_cont").css("min-height",screenW*8);
+
+        $("#qinjuan_nav li").click(function(){
+            var i=$(this).index();
+
+            $(this).addClass("qinjuan_nav_active").siblings().removeClass("qinjuan_nav_active");
+            $(".info").hide();
+            $(".info").eq(i).show();
+            //**************************************************超出省略号
+            var th_wid= $(".info").eq(i).find(".th").width()-10;
+//        console.log(th_wid);
+            $(".tubeFund tbody tr td:first-of-type span").width(th_wid);
+
+            if(i==0){chart01();}
+            if(i==1){chart04();}
+
+
+            if(i==2){
+                if($("#tbody").children().text()!=""){
+//                console.log($("#tbody").children().text())
+//                console.log(12)
+                    $(".notubeFund").hide();
+                }else {
+//                    console.log(34)
+                    $(".notubeFund").show();
+                }
+            }
+
+
+        });
+        //**************************************************点击返回
+        $("#header span").click(function(){
+//            console.log("header");
+            $("html").hide();
+        });
+
+        chart01();
+//        chart04();
+
+        function chart01(){
+            $(function () {
+                $('#chart01').highcharts({
+                    colors: ['#62a9ff', '#d859f2'],
+                    chart: {
+                        polar: true,
+                        type: 'line'
+                    },
+                    credits: {
+                        enabled:false
+                    },
+                    exporting: {
+                        enabled:false
+                    },
+                    title: {
+                        text:null,
+                        x: -80
+                    },
+                    pane: {
+                        size: '75%'
+                    },
+                    xAxis: {
+                        categories: ['管理经验', '管理规模', '最差表现', '一年收益'],
+//                        categories: ['管理经验<br/>Top 49.15%', '\0 \0 \0 管理规模<br/>Top 49.15%',
+//                            '最差表现<br/>Top 49.15%', '一年收益 \0 \0 <br/> Top 49.15%'],
+                        tickmarkPlacement: 'on',
+                        lineWidth: 0,
+                        labels: {
+                            formatter:function(){
+                               // console.log(this.value)
+                                if(this.value=="一年收益"){
+                                    return '<div style="text-align: center;"><span>'+this.value+'\0 </span><br/><span>Top 49.15%</span></div>'
+                                }
+                                else if(this.value=="管理规模"){
+                                    return '<div style="text-align: center;"><span>\0 '+this.value+'</span><br/><span>Top 49.15%</span></div>'
+                                }
+                                return '<div style="text-align: center;"><span>'+this.value+'</span><br/><span>Top 49.15%</span></div>'
+                            }
+                        }
+                    },
+                    yAxis: {
+                        gridLineInterpolation: 'polygon',
+                        lineWidth: 0,
+                        min: 0
+                    },
+                    tooltip: {
+                        shared: true,
+                        pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f}% (top:0.29%)</b><br/>'
+
+                    },
+                    legend: {
+                        align: 'center',
+                        verticalAlign: 'bottom',
+                        y: 10
+//                layout: 'vertical'
+                    },
+                    series: [{
+                        name: '个人能力',
+                        data: [12000, 19000, 60000, 35000],
+                        pointPlacement: 'on'
+                    }, {
+                        name: '新人平均',
+                        data: [50000, 39000, 42000, 31000],
+                        pointPlacement: 'on'
+                    }]
+                });
+            });
+        }
+        function chart04(){
+            // 基于准备好的dom，初始化echarts图表
+            var myChart = echarts.init(document.getElementById('chart04'));
+
+            option = {
+                tooltip : {
+                    trigger: 'axis',
+                    position: function (pos, params, dom, rect, size) {
+                        // 鼠标在左侧时 tooltip 显示到右侧，鼠标在右侧时 tooltip 显示到左侧。
+                        var obj = {top: 60};
+                        obj[['left', 'right'][+(pos[0] < size.viewSize[0] / 2)]] = 5;
+                        return obj;
+                    },
+                    backgroundColor:"rgba(255,255,255,0.7)",
+                    borderWidth:1,
+                    borderColor:"#62a9ff",
+                    textStyle:{
+                        color:"#000",
+                        fontSize:12
+                    },
+                    formatter: function(params) {
+//                        console.log(params)
+                        var res =params[0].axisValue+',星期五</br>';
+                        for (var i = 0; i < params.length; i++) {
+
+                            res+='<span style="color: '+params[i].color+'">'+params[i].seriesName+'</span>:<span style="color: #000;font-weight: bold;">121</span>(+'+params[i].data+'%)</br>'
+                        }
+                       return res;
+                    },
+                    confine:true,
+                    padding: 0
+                },
+
+                grid: {
+                    left: '3%',
+                    right: '5%',
+                    bottom: '40%',
+                    top:10,
+                    containLabel: true
+                },
+
+                legend: {
+                    icon : 'square',
+                    orient:'horizontal',
+//                    width:15,
+//                    height:15,
+                    left:10,
+                    bottom:5,
+                    data:['中融新经济灵活配中融新经济灵活配置混合C置混合C','中融新经济灵活配置混合','中融新经济灵活配置混合A',"中融新经","中融新","中融",'沪深300']
+                },
+                toolbox: {
+                    show : false,
+                    feature : {
+                        mark : {show: true},
+                        dataView : {show: true, readOnly: false},
+                        magicType : {show: true, type: ['line', 'bar', 'stack', 'tiled']},
+                        restore : {show: true},
+                        saveAsImage : {show: true}
+                    }
+                },
+                calculable : true,
+                xAxis : [
+                    {
+                        type : 'category',
+                        boundaryGap : false,
+                        data : ['','05.08','06.05','07.03',''],
+                        axisTick:{    //去掉X轴刻度线
+                            show:false
+                        },
+                        splitLine:{
+                            show:true,
+                            lineStyle:{
+                                type:"dotted",
+                                width:1,
+                                color:"#c5c5c5"
+                            }
+                        },
+                        axisLine:{
+                            lineStyle:{
+                                type:"solid",
+                                width:1,
+                                color:"#b7b7b7"
+                            }
+                        }
+                    }
+                ],
+                yAxis : [
+                    {
+                        type : 'value',
+                        axisLabel : {
+                            inside:true,   //向内展示
+                            formatter: '{value} %',
+                            textStyle: {
+                                fontSize: 12,
+                                baseline:"bottom"
+                            }
+                        },
+                        axisTick:{    //去掉Y轴刻度线
+                            show:false
+                        },
+                        splitLine:{
+                            show:true,
+                            lineStyle:{
+                                type:"dotted",
+                                width:1,
+                                color:"#c5c5c5"
+                            }
+                        },
+                        axisLine:{
+                            lineStyle:{
+                                type:"solid",
+                                width:1,
+                                color:"#b7b7b7"
+                            }
+                        }
+                    }
+                ],
+
+                series : [
+
+                    {
+                        name:'中融新经济灵活配中融新经济灵活配置混合C置混合C',
+                        type:'line',
+//                        stack: '总量',
+                        data:[120, 132, 101, 134, 90, 230, 210],
+                        symbol:"none"
+
+                    },
+                    {
+                        name:'中融新经济灵活配置混合',
+                        type:'line',
+//                        stack: '总量',
+                        data:[120, 182, 191, 234, 290, 330, 310],
+                        symbol:"none"
+                    },
+                    {
+                        name:'中融新经济灵活配置混合A',
+                        type:'line',
+//                        stack: '总量',
+                        data:[150, 232, 201, 154, 190, 330, 410],
+                        symbol:"none"
+                    },
+                    {
+                        name:'中融新经',
+                        type:'line',
+//                        stack: '总量',
+                        data:[130, 132, 101, 134, 90, 230, 210],
+                        symbol:"none"
+
+                    },
+                    {
+                        name:'中融新',
+                        type:'line',
+//                        stack: '总量',
+                        data:[120, 173, 191, 234, 290, 330, 310],
+                        symbol:"none"
+                    },
+                    {
+                        name:'中融',
+                        type:'line',
+//                        stack: '总量',
+                        data:[150, 235, 201, 154, 190, 330, 410],
+                        symbol:"none"
+                    },
+                    {
+                        name:'沪深300',
+                        type:'line',
+//                        stack: '总量',
+                        data:[320, 332, 301, 334, 390, 330, 320],
+                        symbol:"none"
+                    }
+
+                ]
+            };
+
+            // 为echarts对象加载数据
+            myChart.setOption(option);
+            window.onresize = myChart.resize;
+
+        }
+    };
+
+
+</script>
+
+
+

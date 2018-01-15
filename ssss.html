@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta charset="gb2312">
+<meta name="description" content="Touch, responsive, flickable galleries">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+
+<title>111</title>
+<style>
+.ck{ position:fixed;
+left:0; top:0;
+bottom:0;
+right:0;
+background-color:#CCC;
+overflow-y:scroll;
+height: 100%;
+}
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<ul class="ul">
+	<li onclick="box()">楼号</li>
+</ul>
+<script type="text/javascript">
+function closeCustomer(){
+document.getElementById("box").style.display='none';
+//document.getElementById("bg").style.display='none';
+}
+function box()
+{
+document.getElementById('box').style.display = 'block';
+//document.getElementById('bg').style.display = 'block';
+}
+
+</script>
+
+
+
+
+
+<div class="ck" id="box" style="display:none">
+  <div class="margin">
+  <li onclick="closeCustomer()" ><h1>2号楼</h1></li>
+  <li onclick="closeCustomer()" ><h1>4号楼</h1></li>
+  <li onclick="closeCustomer()" ><h1>2号楼</h1></li>
+  <li onclick="closeCustomer()" ><h1>4号楼</h1></li>
+  <li onclick="closeCustomer()" ><h1>2号楼</h1></li>
+  <li onclick="closeCustomer()" ><h1>4号楼</h1></li>
+  <li onclick="closeCustomer()" ><h1>2号楼</h1></li>
+  <li onclick="closeCustomer()" ><h1>4号楼</h1></li>
+  <li onclick="closeCustomer()" ><h1>2号楼</h1></li>
+  <li onclick="closeCustomer()" ><h1>4号楼</h1></li>
+  <li onclick="closeCustomer()" ><h1>2号楼</h1></li>
+  <li onclick="closeCustomer()" ><h1>4号楼</h1></li>
+  <li onclick="closeCustomer()" ><h1>2号楼</h1></li>
+  <li onclick="closeCustomer()" ><h1>4号楼</h1></li>
+  <li onclick="closeCustomer()" ><h1>2号楼</h1></li>
+  <li onclick="closeCustomer()" ><h1>4号楼</h1></li>
+  </div>
+</div>
+
+</body>
+</html>
